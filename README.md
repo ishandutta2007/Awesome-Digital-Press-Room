@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Digital-Press-Room"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Digital-Press-Room?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Digital-Press-Room"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Digital-Press-Room?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Digital-Press-Room/stargazers"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Digital-Press-Room?style=social" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Digital-Press-Room/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Digital-Press-Room?color=blue" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -74,9 +74,9 @@ Below is the comparative breakdown of leading commercial newsroom and wire distr
 
 When commercial SaaS press rooms are cost-prohibitive or lack complete customizability, open-source publishing platforms, headless CMS backends, and static site generators provide robust alternatives for building self-hosted press centers.
 
-The table below ranks top open-source projects for building digital press rooms, sorted in **descending order by GitHub Star Count** ⭐.
+The table below ranks top open-source projects for building digital press rooms, sorted in **descending order by GitHub Stars_Count** ⭐.
 
-| Project Name | Description / Press Room Use Case | GitHub Star Count | Repository Link |
+| Project Name | Description / Press Room Use Case | GitHub Stars_Count | Repository Link |
 | --- | --- | --- | --- |
 | **[WordPress](https://github.com/WordPress/WordPress)** 📝 | World's most popular open CMS foundation; ideal for DIY digital press centers with custom post types, press themes, and media libraries. | [![WordPress Stars](https://img.shields.io/github/stars/WordPress/WordPress?style=social&color=white)](https://github.com/WordPress/WordPress/stargazers) | [WordPress/WordPress](https://github.com/WordPress/WordPress/stargazers) |
 | **[Hugo](https://github.com/gohugoio/hugo)** ⚡ | Ultra-fast open-source static site generator; perfect for lightweight, ultra-secure, zero-maintenance press kits and news archives. | [![Hugo Stars](https://img.shields.io/github/stars/gohugoio/hugo?style=social&color=white)](https://github.com/gohugoio/hugo/stargazers) | [gohugoio/hugo](https://github.com/gohugoio/hugo/stargazers) |
