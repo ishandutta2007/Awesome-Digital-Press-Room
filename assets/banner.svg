@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+    
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 46px; font-weight: 800; fill: url(#title-grad); letter-spacing: -0.5px; }
+      .subtitle { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 19px; font-weight: 400; fill: #94a3b8; }
+      .badge-text { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #e2e8f0; }
+      
+      /* Dynamic Animations */
+      @keyframes float1 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(1deg); }
+      }
+      @keyframes float2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(10px) rotate(-1deg); }
+      }
+      @keyframes pulse-wave {
+        0% { stroke-dashoffset: 1000; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes orb-glow {
+        0%, 100% { opacity: 0.3; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.15); }
+      }
+
+      .floating-card-1 { animation: float1 6s ease-in-out infinite; }
+      .floating-card-2 { animation: float2 8s ease-in-out infinite; }
+      .orb-1 { animation: orb-glow 7s ease-in-out infinite; transform-origin: 200px 100px; }
+      .orb-2 { animation: orb-glow 9s ease-in-out infinite; transform-origin: 1000px 220px; }
+      .wave-line { stroke-dasharray: 50 15; animation: pulse-wave 30s linear infinite; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" rx="16" fill="url(#bg-grad)"/>
+
+  <!-- Background Glowing Orbs (Dynamic elements in distant background) -->
+  <circle class="orb-1" cx="200" cy="80" r="140" fill="#6366f1" filter="url(#glow)" opacity="0.25"/>
+  <circle class="orb-2" cx="1020" cy="240" r="160" fill="#a855f7" filter="url(#glow)" opacity="0.25"/>
+
+  <!-- Dynamic Wave Grid Lines (Background decoration) -->
+  <path class="wave-line" d="M -50 220 Q 300 120 650 250 T 1250 180" fill="none" stroke="#4f46e5" stroke-width="1.5" opacity="0.3"/>
+  <path class="wave-line" d="M -50 250 Q 350 160 700 280 T 1250 210" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.2"/>
+
+  <!-- Decorative Animated Accent Cards in the background right -->
+  <g class="floating-card-1" transform="translate(820, 45)">
+    <rect width="310" height="90" rx="12" fill="url(#card-grad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+    <circle cx="35" cy="35" r="14" fill="#38bdf8" opacity="0.8"/>
+    <rect x="60" y="26" width="120" height="8" rx="4" fill="#e2e8f0" opacity="0.7"/>
+    <rect x="60" y="42" width="180" height="6" rx="3" fill="#64748b" opacity="0.6"/>
+    <rect x="25" y="65" width="260" height="1" fill="#ffffff" opacity="0.1"/>
+  </g>
+
+  <g class="floating-card-2" transform="translate(860, 165)">
+    <rect width="280" height="100" rx="12" fill="url(#card-grad)" stroke="#ffffff" stroke-opacity="0.12" stroke-width="1"/>
+    <rect x="25" y="25" width="40" height="40" rx="8" fill="#818cf8" opacity="0.8"/>
+    <rect x="80" y="30" width="140" height="8" rx="4" fill="#e2e8f0" opacity="0.8"/>
+    <rect x="80" y="48" width="100" height="6" rx="3" fill="#64748b" opacity="0.6"/>
+  </g>
+
+  <!-- Foreground Main Content (Clear, visible title and subtitle) -->
+  <g transform="translate(60, 0)">
+    <!-- Badge -->
+    <g transform="translate(0, 50)">
+      <rect width="230" height="28" rx="14" fill="#6366f1" fill-opacity="0.25" stroke="#818cf8" stroke-opacity="0.4"/>
+      <text x="15" y="19" class="badge-text">📰 DIGITAL PRESS ROOMS</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="135" class="title">Awesome Digital Press Room</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="178" class="subtitle">Curated Online Newsrooms, Media Kits, PR CRM &amp; Open Source Publishing Stacks</text>
+
+    <!-- Category Pills in Foreground -->
+    <g transform="translate(0, 215)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="140" height="32" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="16" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#38bdf8">⚡ Online Newsrooms</text>
+
+      <!-- Pill 2 -->
+      <rect x="152" y="0" width="125" height="32" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="168" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#818cf8">📦 Media Kits</text>
+
+      <!-- Pill 3 -->
+      <rect x="289" y="0" width="155" height="32" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="305" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#c084fc">📡 Wire Distribution</text>
+
+      <!-- Pill 4 -->
+      <rect x="456" y="0" width="150" height="32" rx="8" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+      <text x="472" y="21" font-family="sans-serif" font-size="13" font-weight="500" fill="#4ade80">🔓 Open Source CMS</text>
+    </g>
+
+    <!-- Footer note -->
+    <text x="0" y="280" font-family="sans-serif" font-size="12" fill="#64748b">Updated for Communications Teams, PR Agencies &amp; Open Source Developers</text>
+  </g>
+</svg>
